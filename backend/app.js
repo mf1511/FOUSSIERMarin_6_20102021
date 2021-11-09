@@ -1,13 +1,20 @@
-const express = require ('express')
-const bodyParser = require('body-parser')
-const mongoose = require('mongoose')
-const path = require('path')
+const express = require ('express');
+const helmet = require('helmet');
+const nocache = require('nocache');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const path = require('path');
 
+const sauceRoutes = require('./routes/sauce');
+const userRoutes = require('./routes/user');
 
-const sauceRoutes = require('./routes/sauce')
-const userRoutes = require('./routes/user')
+const app = express();
 
-const app = express()
+app.use(helmet());
+
+//Désactive la mise en cache du navigateur
+app.use(nocache());
+
 
 mongoose.connect('mongodb+srv://mf1511:MongoDb1.@cluster0.jcutr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
     .then(() => console.log('Connexion à MongoDB réussie !'))
