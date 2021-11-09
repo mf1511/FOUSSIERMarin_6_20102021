@@ -1,5 +1,4 @@
 const express = require ('express')
-const helmet = require('helmet')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const path = require('path')
@@ -10,7 +9,6 @@ const sauceRoutes = require('./routes/sauce')
 const userRoutes = require('./routes/user')
 
 const app = express()
-app.use(helmet())
 
 mongoose.connect('mongodb+srv://mf1511:MongoDb1.@cluster0.jcutr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
     .then(() => console.log('Connexion à MongoDB réussie !'))
