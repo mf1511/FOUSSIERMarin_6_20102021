@@ -44,6 +44,7 @@ Développement Backend en Javascript
 3. Lancer le backend
     - Dans un autre terminal, accéder au dossier du backend
     - Installer les dépendances: **npm install**
+    - Installer dotenv: **npm install dotenv**
     - Lancer **node server**
 4. Le frontend est accessible à l'adresse http://localhost:8081
 5. Pour des tests spécifiques (avec postman par exemple), le backend répond à l'adresse: http://localhost:3000 (attention: authentification requise pour toutes les routes /api/sauces/)
