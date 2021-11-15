@@ -33,19 +33,14 @@ Développement Backend en Javascript
 1. Cloner ce repository (https://github.com/mf1511/FOUSSIERMarin_6_20102021), et le lancer : 
     - Dans un terminal, accéder au dossier du frontend
     - Installer les dépendances: **npm install**
-    - Lancer: **ng serve**
+    - Lancer: **npm start**
 
-2. Ajouter un fichier de configuration nommé **".env"** à la racine du backend. A l'intérieur, 5 variables d'environnement "secrètes" seront définies:
-    - MONGODB_PATH = 'lien_vers_la_base_de_données_mongoDB'
-    - TOKEN_KEY = 'clé_secrète_pour_crypter_les_tokens'
-    - EMAIL_KEY = 'clé_secrète_pour_crypter_les_emails'
-    - COOKIE_KEY = 'clé_secrète_pou_la_session'
-    - AUTHORIZED_ORIGIN = 'http://localhost:8081'
-3. Lancer le backend
+2. Lancer le backend
     - Dans un autre terminal, accéder au dossier du backend
     - Installer les dépendances: **npm install**
     - Installer dotenv: **npm install dotenv**
-    - Lancer **node server**
-4. Le frontend est accessible à l'adresse http://localhost:8081
-5. Pour des tests spécifiques (avec postman par exemple), le backend répond à l'adresse: http://localhost:3000 (attention: authentification requise pour toutes les routes /api/sauces/)
+    - Lancer **npm start**
 
+3. Le frontend est accessible à l'adresse http://localhost:8081
+
+4. Pour des tests spécifiques (avec postman par exemple), le backend répond à l'adresse: http://localhost:3000 (attention: authentification requise pour toutes les routes /api/sauces/)

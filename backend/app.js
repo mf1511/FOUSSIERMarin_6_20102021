@@ -17,7 +17,8 @@ app.use(helmet());
 //Désactive la mise en cache du navigateur
 app.use(nocache());
 
-mongoose.connect('mongodb+srv://mf1511:MongoDb1.@cluster0.jcutr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
+mongoose.connect(process.env.MONGO_DB, 
+    { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
     .then(() => console.log('Connexion à MongoDB réussie !'))
     .catch(() => console.log('Connexion à MongoDB échouée !'))
 
